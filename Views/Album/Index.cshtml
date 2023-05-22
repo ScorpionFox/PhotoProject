@@ -1,0 +1,39 @@
+﻿@model IEnumerable<AlbumModel>
+@{
+    ViewData["Title"] = "Photos";
+}
+<body style="background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
+    <div class="row" style="height: 1em;"></div>
+    <div class="row" style="row-gap: 2em; column-gap: 1em;">
+        @foreach (var album in Model)
+        {
+            <div class="container p-0; " style="width: 18rem; height: 26.5rem;">
+
+                <img src="@("~/album/"+album.ImageName)" asp-append-version="true" runat="server" style="height: 20rem; width:100% ">
+                <div class="container-body" style="background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);">
+                    <div class="container-body" style="height: 3rem">
+                        <p class="text-center" style="font-family: Lucida Console; font-weight:900; ">@album.Name</p>
+                    </div>
+
+
+                    <div class="card-footer ">
+                        <a class="btn btn-primary float-right" asp-action="Photos" asp-route-id="@album.Id">
+                            <i class="bi bi-eye-fill"></i> photos
+                        </a>
+                        <a class="btn btn-primary float-right" asp-action="Update" asp-route-id="@album.Id">
+                            <i class="bi bi-eye-fill"></i> update
+                        </a>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        }
+    </div>
+</body>

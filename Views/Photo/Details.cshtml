@@ -1,0 +1,84 @@
+﻿@using PhotoProject.Data
+@model PhotoModel;
+@{
+    ViewData["Title"] = "Photo Details";
+}
+
+
+<body style="background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
+    <div class="row" style="height:1em"></div>
+    <div class="col-md-4 col-xs-6 border-primary mb-3">
+        <div class="card mb-3" style="width: 60em; background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);">
+            <div class="row g-0">
+                <div class="col-md-12">
+                    <div class="card-header text-blackbg-info">
+                        <p class="card-text">
+                            <h5 class="card-title">
+                                @Model.Name
+                            </h5>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img src="@("~/images/"+Model.ImageName)" asp-append-version="true" width="100%">
+                </div>
+                <div class="col-md-6">
+                    <div class="card-body">
+                        <p class="card-text">@Model.Details</p>
+                        
+
+                        <p class="card-text"><b>Camera: </b>@Model.Camera</p>
+                        <p class="card-text"><b>Access: </b>@Model.Access</p>
+                        <p class="card-text"><b>Author: </b>@Model.Author.Name</p>
+                        <p class="card-text"><b>Author: </b>@Model.Author.Id</p>
+                        <p class="card-text"><b>DownVotes: </b>@Model.DownVote</p>
+                        <p class="card-text"><b>UpVotes: </b>@Model.UpVote</p>
+                        <p class="card-text"><b>Tags: </b>@Model.Tags</p>
+                        <p class="card-text"><b>Name: </b>@Model.Name</p>
+                        
+                    </div>
+                    <div class="row" style="row-gap: 1em; column-gap: 1em; width: 40em">
+                        <p class="card-text"><b>albumy: </b></p>
+                        @foreach (var ap in Model.AlbumsPhotos)
+                        {
+                            
+                                <p class="text-center">@ap.Album.Name</p>
+                        }
+                    </div>
+
+                    <div class="row" style="row-gap: 1em; column-gap: 1em; width: 40em">
+                        
+                        <p class="card-text"><b>komentarze: </b></p>
+                        @foreach (var ap in Model.Comments)
+                        {
+                            <p><b>@ap.Author.Name:</b> @ap.Comments</p>
+                        }
+                    </div>
+
+                </div>
+                
+                <div class="col-md-12">
+                    <div class="card-footer " style="height: 4em">
+                        <p class="card-text">
+                            <a class="btn btn-primary float-left mr-3" asp-action="Index">
+                                Show all Photos
+                            </a>
+
+                            
+                                <a class="btn btn-primary float-right" asp-action="Update" asp-route-id="@Model.Id">
+                                    Manage
+                                </a>
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+
+

@@ -1,0 +1,36 @@
+﻿@*@using PhotoProject.Data
+@model AlbumModel;
+
+@{
+    ViewData["Title"] = "Photo Details";
+}
+<body style="background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
+    <div class="row" style="height: 1em;"></div>
+    <div class="row" style="row-gap: 2em; column-gap: 1em;">
+        @foreach (var photo in Model.AlbumsPhotos)
+        {
+            <div class="container p-0; " style="width: 18rem; height: 26.5rem;">
+
+                <img class="w3-card-4" src="@photo.Photo.ImageURL" alt="Card image cap" style="height: 20rem; width:100% ">
+                <div class="container-body" style="background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);">
+                    <div class="container-body" style="height: 3rem">
+                        <p class="text-center" style="font-family: Lucida Console; font-weight:900; ">@photo.Photo.Name</p>
+                    </div>
+
+                    
+                    <div class="card-footer ">
+                        <a class="btn btn-primary float-right" asp-controller="Photo" asp-action="Details" asp-route-id="@photo.Photo.Id">
+                            <i class="bi bi-eye-fill"></i> Details
+                        </a>
+                        <a class="btn btn-primary float-right" asp-controller="AlbumPhoto" asp-action="DeleteConfirmed" asp-route-id="@photo.Album.Id">
+                            <i class="bi bi-eye-fill"></i> Remove
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+        }
+    </div>
+</body>*@

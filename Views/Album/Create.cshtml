@@ -5,6 +5,10 @@
     ViewData["Title"] = "Add photo to album";
 }
 
+<head>
+    <link rel="stylesheet" href="~/css/CreateAlbumStyleSheet.css" asp-append-version="true" />
+</head>
+
 <body style="background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
     <div class="row">
         <div class="col-md-8 offset-2">
@@ -17,40 +21,39 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label asp-for="ImageFile" class="control-label"></label>
-                                    <input asp-for="ImageFile" accept="image/png,image/jpeg,image/jpg" />
+                                    <img src="~/images/icons/imagefile.png" class="icons" /> <label asp-for="ImageFile" class="control-label"></label>
+                                    <input asp-for="ImageFile" accept="image/png,image/jpeg,image/jpg" type="file"/>
                                     <span asp-validation-for="ImageFile" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="Name" class="control-label"></label>
+                                    <img src="~/images/icons/namecard.png" class="icons" />  <label asp-for="Name" class="control-label"></label>
                                     <input asp-for="Name" class="form-control" />
                                     <span asp-validation-for="Name" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="ImageURL" class="control-label"></label>
+                                    <img src="~/images/icons/url.png" class="icons" /> <label asp-for="ImageURL" class="control-label"></label>
                                     <input asp-for="ImageURL" class="form-control" />
                                     <span asp-validation-for="ImageURL" class="text-danger"></span>
                                 </div>
 
                                 <div class="form-group">
-                                    <label asp-for="UrlName" class="control-label"></label>
+                                    <img src="~/images/icons/urlname.png" class="icons" /> <label asp-for="UrlName" class="control-label"></label>
                                     <input asp-for="UrlName" class="form-control" />
                                     <span asp-validation-for="UrlName" class="text-danger"></span>
                                 </div>
 
                                 <div class="form-group">
-                                    <label asp-for="PhotosId" class="control-label"></label>
-                                    <select asp-for="PhotosId" class="form-control" multiple asp-items="ViewBag.PhotosId"></select>
-                                    <span asp-validation-for="PhotosId" class="text-danger"></span>
-                                </div>
-
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label asp-for="Access" class="control-label"></label>
+                                    <img src="~/images/icons/access.png" class="icons" /> <label asp-for="Access" class="control-label"></label>
                                     <select asp-for="Access" class="form-control" asp-items="Html.GetEnumSelectList<AccessLevel>()"></select>
                                     <span asp-validation-for="Access" class="text-danger"></span>
                                 </div>
+
+                                <div class="form-group" id="cos">
+                                    <img src="~/images/icons/id.png" class="icons" /> <label asp-for="PhotosId" class="control-label"></label>
+                                    <select asp-for="PhotosId" class="form-control" multiple asp-items="ViewBag.PhotosId"></select>
+                                    <span asp-validation-for="PhotosId" class="text-danger"></span>
+                                </div>
+                                                      
                             </div>
 
                         </div>
@@ -61,8 +64,7 @@
                         </div>
 
                         <div class="form-group">
-                            <input type="submit" value="Create" class="btn btn-success float-right" />
-                            <a class="btn btn-secondary" asp-action="Index">Show all</a>
+                            <input type="submit" value="Create" class="buttonsubmit" /> <a class="buttonshowall" asp-action="Index">Show all</a>                            
                         </div>
                     </form>
                 </div>

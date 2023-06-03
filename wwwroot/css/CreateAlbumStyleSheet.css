@@ -1,10 +1,66 @@
-﻿body {
+﻿.kontener{
+    margin-left: -120px;
+    float:left;
+}
+#zdj {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    -webkit-animation-name: zdj;
+    animation-name: spinner;
+    -webkit-animation-duration: 6s;
+    animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
 }
 
+@-webkit-keyframes spinner {
+    83.33% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes spinner {
+    83.33% {
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+    /*#zdj:hover {
+        transform: rotate(10deg);
+        transition:5s;
+    }*/
 .form-group {
     font-weight: bold;
     font-size: 20px;
-    margin-top: 15px;
+    margin-top: 15px;   
+    border-radius: 5px;
+    background-color: lightblue;
+    color: black;
+    font-weight: bold;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    padding:5px;
+    width:100%;
+}
+
+.form-control{
+    font-weight:bold;
 }
 
 .control-label {
@@ -18,6 +74,10 @@
 
 #cos {
     margin-bottom: -35px;
+}
+
+#buttony {
+    margin-top: 47px;
 }
 
 .buttonsubmit {
@@ -79,3 +139,64 @@
     transform: scale(0.95);
 }
 
+input#file-input{
+    display: none;
+}
+
+    input#file-input + label {
+        padding: 15px 30px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;
+        border-radius: 10px;
+        border: 0px;
+        font-weight: 700;
+        box-shadow: 0px 0px 14px -7px #f09819;
+        background-image: linear-gradient(45deg, #fcd34d 0%, #ef4444 51%, #FF512F 100%);
+        cursor: pointer;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        display: inline-block;
+        text-decoration: none;
+        margin-left: 10px;
+    }
+
+input#file-input + label:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+#file-name {
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 19px;
+    margin-left: 10px;
+}
+
+.custom-selector {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    color: #888;
+    overflow: auto;
+}
+
+.custom-selector select {
+    border-radius: 3px;
+    border: 2px solid #2196f3;
+    cursor: pointer;
+    margin-top: 5px;
+    overflow: auto;
+}
+
+option:checked {
+    font-weight:bold; 
+    font-size:18px;
+    background-color:transparent;
+}

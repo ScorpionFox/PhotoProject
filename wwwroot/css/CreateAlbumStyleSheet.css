@@ -1,11 +1,11 @@
 ﻿.kontener{
-    margin-left: -120px;
+    margin-left: -15%;
     float:left;
 }
 #zdj {
     position: absolute;
     left: 50%;
-    top: 30%;
+    top: 25%;
     -webkit-animation-name: zdj;
     animation-name: spinner;
     -webkit-animation-duration: 6s;
@@ -72,12 +72,8 @@
     height: 40px;
 }
 
-#cos {
-    margin-bottom: -35px;
-}
-
 #buttony {
-    margin-top: 47px;
+    margin-top: 17px;
 }
 
 .buttonsubmit {

@@ -4,11 +4,11 @@
 }
 
 #zdj {
-    width: 800px;
-    height: 800px;
+    width: 700px;
+    height: 700px;
     position: absolute;
     left: 50%;
-    animation: rotation 5s infinite linear;
+    animation: rotation 10s infinite linear;
     z-index: -99;
 }
 @keyframes rotation {

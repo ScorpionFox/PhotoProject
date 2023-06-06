@@ -40,10 +40,6 @@
     }
 }
 
-    /*#zdj:hover {
-        transform: rotate(10deg);
-        transition:5s;
-    }*/
 .form-group {
     font-weight: bold;
     font-size: 20px;
@@ -88,7 +84,7 @@
     border: 0px;
     font-weight: 700;
     box-shadow: 0px 0px 14px -7px #f09819;
-    background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+    background-image: linear-gradient(45deg, rgb(255, 7, 7) -4.5%, rgb(255, 255, 5) 98.8%);
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
@@ -116,7 +112,7 @@
     border: 0px;
     font-weight: 700;
     box-shadow: 0px 0px 14px -7px #f09819;
-    background-image: linear-gradient(45deg, #8ECAE6 0%, #219EBC 51%, #00b4d8 100%);
+    background-image: linear-gradient(45deg, rgb(13, 11, 136) 9.4%, rgb(86, 255, 248) 78.4%);
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;

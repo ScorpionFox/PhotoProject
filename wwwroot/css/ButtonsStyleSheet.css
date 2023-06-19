@@ -1,0 +1,35 @@
+﻿body {
+    background-image: linear-gradient(344deg, rgba(255,183,3,1) 0%, rgba(230,230,173,0.9) 29%, rgba(173,217,230,.9) 57%);
+}
+.buttony:hover {
+    background-color: yellow;
+    color:black;
+    transition:0.5s;
+}
+.buttony {
+    background-color: #023047;
+    color: white;
+    font-weight: 500;
+    border: none;
+    transition: 0.5s;
+}
+
+@font-face {
+    font-family: 'Rocher';
+    src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+.title {
+    font-family: 'Rocher';
+    font-size:70px;
+}
+
+@font-palette-values --
+Title {
+    font-family: Rocher;
+    base-palette: 6;
+}
+
+.title {
+    font-palette: --Title;
+}

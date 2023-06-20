@@ -33,3 +33,25 @@ Title {
 .title {
     font-palette: --Title;
 }
+
+#container{
+    margin-left:-10%;
+    width:60%;
+    font-size:30px;
+    font-style:italic;
+}
+#header{
+    font-weight:bold;
+    font-size:75px;
+    color:red;
+    padding-bottom:40px;
+}
+
+#banned {
+    width: 500px;
+    height: 500px;
+    position:absolute;
+    left:55%;
+    top:100px;
+    z-index: -99;
+}

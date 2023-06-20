@@ -122,10 +122,13 @@ namespace PhotoProject.Controllers
             var photo = await _service.GetPhotoByIdAsync(id);
             if (photo == null)
                 return NotFound();
-        
-            if (photo.Access == AccessLevel.Private)
+
+            //trzeba admina utworzyć
+            bool isAdmin = User.IsInRole("Admin");
+
+            if (!isAdmin && (photo.Access == AccessLevel.Private || photo.Access == AccessLevel.Limited))
             {
-                // Zdjęcie ma status prywatny, więc odmów dostępu
+                // Zdjęcie ma status prywatny lub limitowany, więc odmowa dostępu
                 return RedirectToAction("AccessDenied", "Home");
             }
 

@@ -24,10 +24,9 @@
     font-size:70px;
 }
 
-@font-palette-values --
-Title {
+@font-palette-values --Title {
     font-family: Rocher;
-    base-palette: 6;
+    base-palette: 11;
 }
 
 .title {
@@ -52,6 +51,6 @@ Title {
     height: 500px;
     position:absolute;
     left:55%;
-    top:100px;
+    top:140px;
     z-index: -99;
 }

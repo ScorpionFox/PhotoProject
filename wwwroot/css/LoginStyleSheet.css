@@ -57,3 +57,27 @@
 .forgotpasslink:hover{
     color:white;
 }
+
+#zdj {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+@font-face {
+    font-family: 'Rocher';
+    src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+.zdj {
+    font-family: 'Rocher';
+    font-size: 40px;
+}
+
+@font-palette-values --Zdj {
+    font-family: Rocher;
+    base-palette: 11;
+}
+
+.zdj {
+    font-palette: --Zdj;
+}

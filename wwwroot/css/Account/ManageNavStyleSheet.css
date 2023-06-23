@@ -1,0 +1,41 @@
+﻿body {
+    background-image: linear-gradient(344deg, rgba(255,183,3,1) 0%, rgba(230,230,173,0.9) 29%, rgba(173,217,230,.9) 57%);
+}
+
+.nawigacja {
+    text-decoration: none;
+    background-color: transparent;
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #023047;
+    color: white;
+    font-weight: 500;
+    border: none;
+    transition: 0.5s;
+    border-radius: 0.25rem;
+}
+
+.lis {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    height: 50px;
+    border-style:solid;
+    border-left:1px;
+    border-right:1px;
+    border-top: 0.5px;
+    border-bottom:0.5px;
+}
+
+.nawigacja:hover {
+    background-color: yellow;
+    color: black;
+    transition: 0.5s;
+    font-size:17px;
+}

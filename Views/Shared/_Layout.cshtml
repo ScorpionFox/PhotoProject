@@ -1,7 +1,5 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using PhotoProject.Areas.Identity.Data
-@inject SignInManager<PhotoProjectUser> SignInManager
-@inject UserManager<PhotoProjectUser> UserManager
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,8 +14,8 @@
     <link rel="stylesheet" href="~/css/NavBarStyleSheet.css" asp-append-version="true" />
 </head>
 <body>
-    @if (SignInManager.IsSignedIn(User))
-    {
+  
+    
         <header>
             <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom shadow mb-3" id="navbartlo">
                 
@@ -60,7 +58,7 @@
               
             </nav>
         </header>
-    }
+    
     <div class="container">
         @*To tutaj jest manage account*@
         <main role="main" class="pb-3">

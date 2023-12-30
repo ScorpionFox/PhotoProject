@@ -1,0 +1,38 @@
+﻿body {
+    background-color: transparent;
+}
+
+.inputy {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #e3f6f5;
+    color: black;
+    font-weight: bold;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+#button {
+    text-decoration: none;
+    background-color: transparent;
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #023047;
+    color: white;
+    font-weight: 500;
+    border: none;
+    transition: 0.5s;
+    border-radius: 0.25rem;
+}
+
+    #button:hover {
+        background-color: yellow;
+        color: black;
+        transition: 0.5s;
+        font-size: 17px;
+    }

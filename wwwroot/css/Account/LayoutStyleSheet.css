@@ -1,0 +1,16 @@
+﻿body {
+    background-color: transparent;
+}
+
+h1{
+    font-weight:bold;
+}
+h2{
+    font-style:italic;
+}
+
+#zdj {
+    position: absolute;
+    left: 63%;
+    top: 25%;
+}

@@ -7,7 +7,7 @@ using PhotoProject.Models;
 
 namespace PhotoProject.Controllers;
 
-[Authorize]
+[AllowAnonymous]
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
